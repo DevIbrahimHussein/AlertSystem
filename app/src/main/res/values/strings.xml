@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Alert System</string>
+    <string name="full_name">Full Name</string>
+    <string name="blood_type">Blood Type</string>
+    <string name="emergency_phone_number">Emergency Phone Number</string>
+    <string name="emergency_name">Emergency Name</string>
+    <string name="submit">Submit</string>
+    <string name="sos">SOS</string>
 </resources>

@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.item.alertsystem.R
 
 class MainFragment : Fragment() {
+
+    private var submitButton: Button ?= null
 
     companion object {
         fun newInstance() = MainFragment()
@@ -21,12 +24,18 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         return inflater.inflate(R.layout.main_fragment, container, false)
-    }
+    } // onCreateView
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+
+        init()
+
+    } // onActivityCreated
+
+    private fun init(){
+        this.submitButton = view!!.findViewById(R.id.submit_id) as Button
+    } // init
 
 }
